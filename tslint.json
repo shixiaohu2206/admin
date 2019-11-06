@@ -1,0 +1,14 @@
+{
+  "extends": ["tslint-config-egg"],
+  "rules": {
+    "semicolon": [true, "never"],
+    "array-bracket-spacing": [true, "never"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ]
+  }
+}

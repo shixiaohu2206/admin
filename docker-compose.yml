@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  nginx:
+    image: shixiaohu2206/nginx
+    container_name: 'nginx'
+    tty: true
+    restart: always
+    depends_on:
+      - gogs
+      - admin
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - bridge
+
+  gogs:
+    image: shixiaohu2206/gogs
+    container_name: 'gogs'
+    restart: always
+    volumes:
+      - /docker/gogs:/data
+    ports:
+      - '10022:22'
+    networks:
+      - bridge
+
+  admin:
+    image: shixiaohu2206/admin
+    container_name: 'admin'
+    restart: always
+    networks:
+      - bridge
+
+networks:
+  bridge:

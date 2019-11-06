@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>虎虎</title>
+  </head>
+  <body style="margin:0;padding:0;">
+    <div style="width:100%;margin:1rem auto;">
+      <h2 style="text-align:left;">
+        叶彬文小宝宝：
+      </h2>
+      <h3 style="text-align:center;">
+        我们已经在一起
+        <span
+          style="font-size: 2rem;color: rgb(0, 97, 196);display: inline-block;vertical-align: middle;"
+        >
+          <%= date.together_time %>
+        </span>
+        天
+        <br />
+        下次见面还有
+        <span
+          style="font-size: 2rem;color: rgb(0, 97, 196);display: inline-block;vertical-align: middle;"
+        >
+          <%= date.nextmeet_time %>
+        </span>
+        天
+      </h3>
+      <div style="font-size:1.2rem;text-align: center;font-size: 0.9rem;">
+        <%= mojiData.tips %>
+      </div>
+      <div style="margin-top:2rem;text-align: center;">
+        <ul style="margin:0; padding:0;width:100%;">
+          <% for(var i = 0; i < mojiData.weather.length; i++) { %>
+          <li
+            style="list-style:none; height:2rem; line-height: 2rem;width:100%;"
+          >
+            <span style="display:inline-block;width: 20%;">
+              <%= mojiData.weather[i].day %>
+            </span>
+            <span style="display:inline-block;width: 5%;">
+              <img
+                src="<%= mojiData.weather[i].weatherImg %>"
+                alt="<%= mojiData.weather[i].weatherDes %>"
+                style="width:2rem;display: inline-block;vertical-align: middle;"
+              />
+            </span>
+            <span style="display:inline-block;width: 15%;">
+              <%= mojiData.weather[i].weatherDes %>
+            </span>
+            <span style="display:inline-block;width: 20%;">
+              <%= mojiData.weather[i].temperature %>
+            </span>
+
+            <% if (mojiData.weather[i].color_level == 'level_1') {%>
+            <span
+              style="display:inline-block;width: 20%;color: #8fc31f;"
+            >
+            <% } %>
+            <% if (mojiData.weather[i].color_level == 'level_2') {%>
+            <span
+              style="display:inline-block;width: 20%;color: #d7af0e;"
+            >
+            <% } %>
+            <% if (mojiData.weather[i].color_level == 'level_3') {%>
+            <span
+              style="display:inline-block;width: 20%;color: #f39800;"
+            >
+            <% } %>
+            <% if (mojiData.weather[i].color_level == 'level_4') {%>
+            <span
+              style="display:inline-block;width: 20%;color: #e2361a;"
+            >
+            <% } %>
+            <% if (mojiData.weather[i].color_level == 'level_5') {%>
+            <span
+              style="display:inline-block;width: 20%;color: #5f52a0;"
+            >
+            <% } %>
+            <% if (mojiData.weather[i].color_level == 'level_6') {%>
+            <span
+              style="display:inline-block;width: 20%;color: #631541;"
+            >
+            <% } %>
+            <%= mojiData.weather[i].level %>
+            </span>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <div style="margin-top: 2rem;text-align: center;">
+        <div style="font-size:0.9rem;color:grey;">「ONE · 一个」</div>
+        <img
+          src="<%= oneData.imgSrc %>"
+          style="width: 100%;margin-top: 1rem;"
+        />
+        <div style="width: 100%;margin:1rem auto;">
+          <%= oneData.text %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
