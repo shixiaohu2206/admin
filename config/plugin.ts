@@ -7,6 +7,12 @@ const plugin: EggPlugin = {
   routerPlus: {
     enable: true,
     package: 'egg-router-plus'
+  },
+
+  // alinode
+  alinode: {
+    enable: true,
+    package: 'egg-alinode'
   }
 }
 

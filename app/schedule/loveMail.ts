@@ -20,7 +20,7 @@ class LoveMail extends Subscription {
        *   │    └──────────────────── minute (0 - 59)
        *   └───────────────────────── second (0 - 59, optional)
        */
-      cron: '0 11 18 * * *', // 每天八点
+      cron: '0 0 8 * * *', // 每天八点
       type: 'all', // 指定所有的 worker 都需要执行
       immediate: true, // 项目启动就执行一次定时任务
       cronOptions: {

@@ -43,6 +43,12 @@ export default (appInfo: EggAppInfo) => {
     nextmeet_time: '2019-12-31'
   }
 
+  // alinode
+  config.alinode = {
+    appid: '82081',
+    secret: '2a08ca593e119e905cd0163a77251c29088a85cd'
+  }
+
   // the return config will combines to EggAppConfig
   return {
     ...config
