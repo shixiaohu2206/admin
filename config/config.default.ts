@@ -49,6 +49,12 @@ export default (appInfo: EggAppInfo) => {
     secret: '2a08ca593e119e905cd0163a77251c29088a85cd'
   }
 
+  // 百度统计
+  config.baidutongji = {
+    api_key: 'e3meh8A4bdWiUsTNV2KU3XQ9rEfesfIo', // API Key
+    secret_key: 'Hahk4AEg4YW38Mxj0GO8Q6O2AAC24v3S' // Secret Key
+  }
+
   // the return config will combines to EggAppConfig
   return {
     ...config

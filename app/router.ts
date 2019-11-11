@@ -12,4 +12,13 @@ export default (app: Application) => {
 
   // 获取天气信息
   apiRouter.all('/getWeather', controller.weatherController.getWeather)
+
+  // 重定向到登陆地址
+  apiRouter.all('/getLoginUrl', controller.tongjiController.getLoginUrl)
+
+  // 获取code
+  apiRouter.all('/getCode', controller.tongjiController.getCode)
+
+  // 获取ACCESS_TOKEN
+  apiRouter.all('/getAccessToken', controller.tongjiController.getAccessToken)
 }
